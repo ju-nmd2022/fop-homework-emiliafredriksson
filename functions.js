@@ -1,3 +1,9 @@
+function calculatorSubtraction(a, b) {
+  return a - b;
+}
+
+console.log(calculatorSubtraction(200, 50));
+
 background(255);
 
 function emoji(x, y, s) {
