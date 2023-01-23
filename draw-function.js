@@ -1,15 +1,6 @@
-/* let w = 20;
-
-function draw() {
-  clear();
-  fill(0, 225, 225);
-  rect(50, 50, w, 20);
-
-  w = w + 3;
-} */
-
 let x = 0;
 let y = 0;
+let w = 20;
 
 function emoji(x, y, s) {
   angleMode(DEGREES);
@@ -122,9 +113,12 @@ function emoji(x, y, s) {
 }
 
 function draw() {
-  clear();
+  background(255, 0, 255);
+  /* fill(0, 225, 225);
+  rect(50, 50, w, 20); */
   emoji(x, y, 0.5);
 
+  //   w = w + 3;
   x = x + 4;
   y = y + 3;
 }
