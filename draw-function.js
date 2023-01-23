@@ -1,4 +1,4 @@
-let x = 0;
+let x = 700;
 let y = 0;
 let w = 20;
 
@@ -119,6 +119,6 @@ function draw() {
   emoji(x, y, 0.5);
 
   //   w = w + 3;
-  x = x + 4;
+  x = x - 4;
   y = y + 3;
 }
