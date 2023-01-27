@@ -1,109 +1,106 @@
 background(0, 255, 255);
 
-function flappy() {
+function flappy(x, y) {
   // Legs behind
   fill(255);
   beginShape();
-  vertex(265, 180);
-  vertex(310, 195);
-  bezierVertex(315, 195, 310, 220, 305, 220);
-  vertex(265, 220);
+  vertex(x + 65, y - 20);
+  vertex(x + 110, y - 5);
+  bezierVertex(x + 115, y - 5, x + 110, y + 20, x + 105, y + 20);
+  vertex(x + 65, y + 20);
   endShape();
 
   beginShape();
-  vertex(105, 200);
-  vertex(60, 220);
-  bezierVertex(55, 220, 60, 245, 65, 245);
-  vertex(115, 235);
+  vertex(x - 95, y);
+  vertex(x - 140, y + 20);
+  bezierVertex(x - 145, y + 20, x - 140, y + 45, x - 135, y + 45);
+  vertex(x - 85, y + 35);
   endShape();
 
   fill(0);
   beginShape();
-  vertex(310, 195);
-  bezierVertex(315, 195, 310, 220, 305, 220);
-  vertex(315, 220);
-  bezierVertex(320, 220, 325, 198, 320, 198);
-  vertex(310, 195);
+  vertex(x + 110, y - 5);
+  bezierVertex(x + 115, y - 5, x + 110, y + 20, x + 105, y + 20);
+  vertex(x + 115, y + 20);
+  bezierVertex(x + 120, y + 20, x + 125, y - 2, x + 120, y - 2);
+  vertex(x + 110, y - 5);
   endShape();
 
   beginShape();
-  vertex(60, 220);
-  bezierVertex(55, 220, 60, 245, 65, 245);
-  vertex(55, 247);
-  bezierVertex(50, 247, 45, 223, 50, 223);
-  vertex(60, 220);
+  vertex(x - 140, y + 20);
+  bezierVertex(x - 145, y + 20, x - 140, y + 45, x - 135, y + 45);
+  vertex(x - 145, y + 47);
+  bezierVertex(x - 150, y + 47, x - 155, y + 23, x - 150, y + 23);
+  vertex(x - 140, y + 20);
   endShape();
 
   //   The tail
-  push();
-  //   scale(1.2);
   fill("#FF1493");
   beginShape();
-  vertex(115, 170);
-  bezierVertex(110, 160, 80, 155, 70, 165);
-  bezierVertex(60, 175, 45, 180, 35, 175);
-  bezierVertex(45, 190, 95, 220, 105, 185);
+  vertex(x - 85, y - 30);
+  bezierVertex(x - 90, y - 40, x - 120, y - 45, x - 130, y - 35);
+  bezierVertex(x - 140, y - 25, x - 155, y - 20, x - 165, y - 25);
+  bezierVertex(x - 155, y - 10, x - 105, y + 20, x - 95, y - 15);
   endShape();
-  pop();
 
   // The body
   fill(255);
   beginShape();
-  vertex(255, 145);
-  bezierVertex(50, 115, 50, 280, 225, 255);
-  bezierVertex(290, 245, 285, 180, 275, 165);
+  vertex(x + 55, y - 55);
+  bezierVertex(x - 150, y - 85, x - 150, y + 80, x + 25, y + 55);
+  bezierVertex(x + 90, y + 45, x + 85, y - 20, x + 75, y - 35);
   endShape();
 
   //   Legs on this side
   fill(255);
   beginShape();
-  vertex(110, 215);
-  vertex(85, 270);
-  bezierVertex(85, 275, 110, 285, 110, 280);
-  vertex(150, 240);
+  vertex(x - 90, y + 15);
+  vertex(x - 115, y + 70);
+  bezierVertex(x - 115, y + 75, x - 90, y + 85, x - 90, y + 80);
+  vertex(x - 50, y + 40);
   endShape();
 
   beginShape();
-  vertex(260, 210);
-  vertex(300, 255);
-  bezierVertex(300, 260, 280, 275, 280, 270);
-  vertex(230, 240);
+  vertex(x + 60, y + 10);
+  vertex(x + 100, y + 55);
+  bezierVertex(x + 100, y + 60, x + 80, y + 75, x + 80, y + 70);
+  vertex(x + 30, y + 40);
   endShape();
 
   fill(0);
   beginShape();
-  vertex(85, 270);
-  bezierVertex(85, 275, 110, 285, 110, 280);
-  vertex(102, 290);
-  bezierVertex(102, 295, 80, 285, 80, 280);
-  vertex(85, 270);
+  vertex(x - 115, y + 70);
+  bezierVertex(x - 115, y + 75, x - 90, y + 85, x - 90, y + 80);
+  vertex(x - 98, y + 90);
+  bezierVertex(x - 98, y + 95, x - 120, y + 85, x - 120, y + 80);
+  vertex(x - 115, y + 70);
   endShape();
 
   beginShape();
-  vertex(300, 255);
-  bezierVertex(300, 260, 280, 275, 280, 270);
-  vertex(288, 275);
-  bezierVertex(293, 278, 306, 265, 306, 263);
-  vertex(300, 255);
+  vertex(x + 100, y + 55);
+  bezierVertex(x + 100, y + 60, x + 80, y + 75, x + 80, y + 70);
+  vertex(x + 88, y + 75);
+  bezierVertex(x + 93, y + 78, x + 106, y + 65, x + 106, y + 63);
+  vertex(x + 100, y + 55);
   endShape();
 
   //   The head
   fill(255);
   beginShape();
-  vertex(200, 100);
-  bezierVertex(160, 220, 340, 220, 300, 100);
-  bezierVertex(330, 80, 300, 40, 280, 85);
-  vertex(220, 85);
-  bezierVertex(200, 40, 170, 80, 200, 100);
+  vertex(x, y - 100);
+  bezierVertex(x - 40, y + 20, x + 140, y + 20, x + 100, y - 100);
+  bezierVertex(x + 130, y - 120, x + 100, y - 160, x + 80, y - 115);
+  vertex(x + 20, y - 115);
+  bezierVertex(x, y - 160, x - 30, y - 120, x, y - 100);
   endShape();
 
   //   The face
   fill(0);
-  ellipse(240, 165, 5, 7);
-  ellipse(260, 165, 5, 7);
+  ellipse(x + 40, y - 35, 5, 7);
+  ellipse(x + 60, y - 35, 5, 7);
 
-  ellipse(225, 130, 15, 20);
-  ellipse(275, 130, 15, 20);
+  ellipse(x + 25, y - 70, 15, 20);
+  ellipse(x + 75, y - 70, 15, 20);
 
   fill(255);
   ellipse(227, 127, 7);
@@ -128,7 +125,7 @@ function flappy() {
   bezierVertex(260, 120, 280, 100, 280, 85);
   endShape();
 
-  // The horn (problem somewhere but where????)
+  // The horn
   fill(255, 255, 0);
   beginShape();
   vertex(242, 85);
@@ -142,4 +139,4 @@ function flappy() {
   line(245, 56, 254, 51);
 }
 
-flappy();
+flappy(200, 200);
