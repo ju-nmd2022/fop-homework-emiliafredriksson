@@ -1,0 +1,34 @@
+* {
+  font-family: sans-serif;
+}
+
+.moves-container,
+.result-container,
+.score-container {
+  display: flex;
+}
+
+.moves-container {
+  gap: 3rem;
+}
+
+.result-container {
+  gap: 7rem;
+}
+.result-container > p {
+  margin-top: 1rem;
+  font-size: 7rem;
+}
+
+.moves-container > p {
+  margin-top: 1rem;
+  font-size: 6rem;
+}
+
+.score-container {
+  gap: 3rem;
+}
+
+.score-container > p {
+  font-size: 3rem;
+}
